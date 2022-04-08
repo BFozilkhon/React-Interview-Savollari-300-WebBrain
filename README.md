@@ -504,27 +504,41 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-6. ### When to use a Class Component over a Function Component?
+6. ### Qachon function Component orginga Class Component ishlatiladi ?
 
-    If the component needs *state or lifecycle methods* then use class component otherwise use function component.
-    *However, from React 16.8 with the addition of Hooks, you could use state , lifecycle  methods and other features that were only available in class component right in your function component.*
-    *So, it is always recommended to use Function components, unless you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries *
+   Agar komponentga state yoki lifescycle usullari kerak bo'lsa, class komponentidan
+   foydalaning, aks holda funktsiya komponentidan foydalaning. *Biroq, React 16.8
+   dan Hooks qo'shilgan holda siz faqat o'z funksiya komponentingizda class
+   komponentida mavjud bo'lgan state , lifescycle usullari va boshqa xususiyatlardan
+   foydalanishingiz mumkin.* *Shunday ekan, har doim Function komponentlaridan
+   foydalanish tavsiya etiladi, agar sizga Function komponenti ekvivalenti hali
+   mavjud boʻlmagan React funksiyasi kerak boʻlmasa, masalan, Error Boundaries *
 
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-7. ### What are Pure Components?
-
-    *`React.PureComponent`* is exactly the same as *`React.Component`* except that it handles the `shouldComponentUpdate()` method for you. When props or state changes, *PureComponent* will do a shallow comparison on both props and state. *Component* on the other hand won't compare current props and state to next out of the box. Thus, the component will re-render by default whenever `shouldComponentUpdate` is called.
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-8. ### What is state in React?
+7. ###  Pure Component nima ?
 
-    *State* of a component is an object that holds some information that may change over the lifetime of the component. We should always try to make our state as simple as possible and minimize the number of stateful components.
+    *`React.PureComponent`* aynan *React.Component* bilan bir xil, faqat u siz uchun
+    *`shouldComponentUpdate()`* usulini boshqaradi. Prop yoki state o'zgarganda,
+    PureComponent ikkala prop va state bo'yicha sayoz taqqoslashni amalga
+    oshiradi. Boshqa tomondan, komponent joriy prop va statno qutidan keyingi bilan
+    solishtirmaydi. Shunday qilib, *`shouldComponentUpdate`* chaqirilganda komponent
+    default bo'yicha qayta ko'rsatiladi.
 
-    Let's create a user component with message state,
+
+   **[⬆ Back to Top](#table-of-contents)**
+    
+8. ###  React state nima ?
+
+    **State** - komponentning ishlash muddati davomida o'zgarishi
+    mumkin bo'lgan ba'zi ma'lumotlarni saqlaydigan ob'ekt. Biz har doim statemizni
+    iloji boricha soddalashtirishga harakat qilishimiz va statistik komponentlar sonini
+    kamaytirishimiz kerak.
+
+
+    Xabar keluvchi komponentini yarataylik,
 
 
     ```jsx harmony
@@ -549,28 +563,35 @@ You can download the PDF and Epub version of this repository from the latest run
 
     ![state](images/state.jpg)
 
-    State is similar to props, but it is private and fully controlled by the component ,i.e., it is not accessible to any other component till the owner component decides to pass it.
+  Holat *state* o'xshaydi, lekin u shaxsiydir va komponent tomonidan to'liq nazorat qilinadi, ya'ni egasi komponent uni o'tkazishga qaror qilmaguncha, boshqa komponentlarga kirish imkoni yo'q.
+
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-9. ### What are props in React?
+9. ### Reactda proplar nima ?
 
-    *Props* are inputs to components. They are single values or objects containing a set of values that are passed to components on creation using a naming convention similar to HTML-tag attributes. They are data passed down from a parent component to a child component.
+    *Proplar* komponentlarga kiritilgan qiymatlardir . Ular HTML-teg atributlariga
+    o'xshash nomlash qoidalaridan foydalangan holda yaratilganda komponentlarga
+    uzatiladigan qiymatlar to'plamini o'z ichiga olgan yagona qiymatlar yoki
+    ob'ektlardir. Ular asosiy komponentdan kichik komponentga uzatiladigan
+    ma'lumotlardir.
 
-    The primary purpose of props in React is to provide following component functionality:
+    React-dagi rekvizitlarning asosiy maqsadi quyidagi komponentlarning funksionalligini ta'minlashdir:
 
-    1. Pass custom data to your component.
-    2. Trigger state changes.
-    3. Use via `this.props.reactProp` inside component's `render()` method.
 
-    For example, let us create an element with `reactProp` property:
+    1. Shaxsiy ma'lumotlarni komponentingizga o'tkazing.
+    2. Trigger holati o'zgarishlari.
+    3. Komponentning `render()` usuli ichida `this.props.reactProp()` orqali foydalanish.
+
+    Masalan, `reactProp` xususiyatiga ega element yarataylik:
 
     ```jsx harmony
     <Element reactProp={'1'} />
     ```
 
-    This `reactProp` (or whatever you came up with) name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
+    Ushbu `reactProp` (yoki siz o'ylab topgan narsangiz) nomi keyin React kutubxonasi yordamida yaratilgan barcha komponentlarda allaqachon mavjud bo'lgan Reactning mahalliy rekvizit ob'ektiga biriktirilgan xususiyatga aylanadi.
+
 
     ```
     props.reactProp
@@ -579,39 +600,51 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-10. ### What is the difference between state and props?
+10. ### State va proplarni farqalari nima ?
 
-    Both *props* and *state* are plain JavaScript objects. While both of them hold information that influences the output of render, they are different in their functionality with respect to component. Props get passed to the component similar to function parameters whereas state is managed within the component similar to variables declared within a function.
+    Har ikkala *prop* va *state* oddiy JavaScript obyektlaridir. Ularning ikkalasi ham
+    render natijasiga ta'sir etuvchi ma'lumotga ega bo'lsa-da, ular komponentga
+    nisbatan o'zlarining funksionalligi jihatidan farq qiladi. Rekvizitlar funksiya
+    parametrlariga o'xshash komponentga o'tadi, holat esa funktsiya ichida e'lon
+    qilingan o'zgaruvchilarga o'xshash komponent ichida boshqariladi
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-11. ### Why should we not update the state directly?
+11. ### Nima Sababdan stateni togridan togri yangilamaymiz ?
 
-    If you try to update the state directly then it won't re-render the component.
+    Agar siz to'g'ridan-to'g'ri holatni yangilashga harakat qilsangiz, u komponentni qayta ko'rsatmaydi.
 
     ```javascript
     //Wrong
     this.state.message = 'Hello world'
     ```
 
-    Instead use `setState()` method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering.
+    Buning o'rniga `setState()` usulidan foydalaning. U komponent
+    holati ob'ektiga yangilanishni rejalashtiradi. Holat o'zgarganda, komponent qayta
+    ko'rsatish orqali javob beradi.
 
     ```javascript
     //Correct
     this.setState({ message: 'Hello World' })
     ```
 
-    **Note:** You can directly assign to the state object either in *constructor* or using latest javascript's class field declaration syntax.
+    **Note:** Siz to'g'ridan-to'g'ri davlat ob'ektini *constructor* yoki so'nggi javascriptning sinf maydoni deklaratsiyasi sintaksisidan foydalanib belgilashingiz mumkin.
+
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-12. ### What is the purpose of callback function as an argument of `setState()`?
+12. ### . `setState()` argumenti sifatida callback funcksiyasining maqsadi nima ?
 
-    The callback function is invoked when setState finished and the component gets rendered. Since `setState()` is **asynchronous** the callback function is used for any post action.
 
-    **Note:** It is recommended to use lifecycle method rather than this callback function.
+   Callback funktsiyasi setState tugallanganda va komponent ko'rsatilganda
+   chaqiriladi. `setState()` *asinxron* bo'lgani uchun callback funktsiyasi har qanday
+   post harakati uchun ishlatiladi.
+
+
+    **Note:**  Ushbu callback funktsiyasidan ko'ra lifecycle usulidan foydalanish tavsiya etiladi.
+
 
     ```javascript
     setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))
@@ -620,28 +653,29 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-13. ### What is the difference between HTML and React event handling?
-    Below are some of the main differences between HTML and React event handling,
+13. ### Html va React event handling farqlari nima ?
+   Quyida HTML va React hodisalarini boshqarish o'rtasidagi asosiy farqlardan ba'zilari keltirilgan,
 
-    1. In HTML, the event name usually represents in *lowercase* as a convention:
+    1. HTMLda hodisa nomi odatda konvensiya sifatida kichik harflarda ifodalanadi::
 
         ```html
         <button onclick='activateLasers()'>
         ```
 
-       Whereas in React it follows *camelCase* convention:
+       Reactda esa *camelCase* konventsiyasiga amal qiladi:
+
 
         ```jsx harmony
         <button onClick={activateLasers}>
         ```
 
-    2. In HTML, you can return `false` to prevent default behavior:
+    2. HTMLda standart xatti-harakatni oldini olish uchun `false` ni qaytarishingiz mumkin:
 
         ```html
         <a href='#' onclick='console.log("The link was clicked."); return false;' />
         ```
 
-       Whereas in React you must call `preventDefault()` explicitly:
+      Aksincha, Reactda siz `preventDefault()` ni aniq chaqirishingiz kerak:
 
         ```javascript
         function handleClick(event) {
@@ -650,17 +684,20 @@ You can download the PDF and Epub version of this repository from the latest run
         }
         ```
 
-    3. In HTML, you need to invoke the function by appending `()`
-       Whereas in react you should not append `()` with the function name. (refer "activateLasers" function in the first point for example)
+    3. HTMLda siz funktsiyani `()` qo'shish orqali chaqirishingiz kerak, reaksiyada esa
+    funktsiya nomi bilan `()` qo'shmasligingiz kerak. (masalan, birinchi nuqtada
+    "activateLasers" funksiyasiga qarang)
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-14. ### How to bind methods or event handlers in JSX callbacks?
+14. ### JSX callbacks da qanday qilib metodlarini va event handlerlarini bind qilish mumkin ?
 
-    There are 3 possible ways to achieve this:
+    Bunga erishishning 3 ta usuli mavjud:
 
-    1.	**Binding in Constructor:** In JavaScript classes, the methods are not bound by default. The same thing applies for React event handlers defined as class methods. Normally we bind them in constructor.
+    1.	**Konstruktorda bog'lash:** JavaScript sinflarida usullar sukut bo'yicha bog'lanmaydi.
+    Xuddi shu narsa sinf usullari sifatida belgilangan React hodisasi ishlov
+    beruvchilari uchun ham amal qiladi. Odatda biz ularni konstruktorda bog'laymiz.
 
         ```javascript
         class Foo extends Component {
@@ -678,7 +715,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
         ```
 
-    2. **Public class fields syntax:** If you don't like to use bind approach then *public class fields syntax* can be used to correctly bind callbacks.
+    2. **Public class fields syntax:** Agar siz bog'lash usulidan foydalanishni
+    yoqtirmasangiz, umumiy sinf maydonlari sintaksisi qayta qo'ng'iroqlarni to'g'ri
+    bog'lash uchun ishlatilishi mumkin.
 
         ```jsx harmony
         handleClick = () => {
@@ -692,7 +731,7 @@ You can download the PDF and Epub version of this repository from the latest run
         </button>
         ```
 
-    3. **Arrow functions in callbacks:** You can use *arrow functions* directly in the callbacks.
+    3. **Arrow functions in callbacks:** Callbacklarda togridan togri arrow funksiya ishlatsangiz boladi
 
         ```jsx harmony
         handleClick() {
@@ -703,20 +742,21 @@ You can download the PDF and Epub version of this repository from the latest run
         }
         ```
 
-    **Note:** If the callback is passed as prop to child components, those components might do an extra re-rendering. In those cases, it is preferred to go with `.bind()` or *public class fields syntax* approach considering performance.
+    **Note:** Agar qayta qo'ng'iroq bola komponentlarga tayanch sifatida uzatilsa, bu komponentlar qo'shimcha qayta ishlashni amalga oshirishi mumkin. Bunday hollarda unumdorlikni hisobga olgan holda `.bind()` yoki *Public class fields syntax* yondashuvidan foydalanish afzalroqdir.
+
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-15. ### How to pass a parameter to an event handler or callback?
+15. ### Callback yoki event handler ga qanday qilib parameter yuboriladi ?
 
-    You can use an *arrow function* to wrap around an *event handler* and pass parameters:
+Siz *hodisa ishlov beruvchisi* atrofida oʻrash va parametrlarni oʻtkazish uchun *oʻq funksiyasidan* foydalanishingiz mumkin:
 
     ```jsx harmony
     <button onClick={() => this.handleClick(id)} />
     ```
 
-    This is an equivalent to calling `.bind`:
+    Bu “.bind” chaqiruviga togri keladi: 
 
     ```jsx harmony
     <button onClick={this.handleClick.bind(this, id)} />
@@ -732,16 +772,18 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-16. ### What are synthetic events in React?
+16. ### React sintetik hodisalar nima ?
 
-    `SyntheticEvent` is a cross-browser wrapper around the browser's native event. Its API is same as the browser's native event, including `stopPropagation()` and `preventDefault()`, except the events work identically across all browsers.
+    `SyntheticEvent` brauzerning mahalliy hodisasi atrofidagi oʻzaro brauzer oʻramidir. Uning API’si brauzerning mahalliy hodisasi bilan bir xil, jumladan `stopPropagation()` va `preventDefault()`, bundan tashqari voqealar barcha brauzerlarda bir xil ishlaydi.
+
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-17. ### What are inline conditional expressions?
+17. ### Inline conditional exresssion nima ?
 
-    You can use either *if statements* or *ternary expressions* which are available from JS to conditionally render expressions. Apart from these approaches, you can also embed any expressions in JSX by wrapping them in curly braces and then followed by JS logical operator `&&`.
+    Ifodalarni shartli ko'rsatish uchun JSda mavjud bo'lgan *if iboralari* yoki *uchlik ifodalardan* foydalanishingiz mumkin. Ushbu yondashuvlardan tashqari, siz JSX-ga istalgan iboralarni jingalak qavslarga o'rash va keyin JS mantiqiy operatori `&&` orqali joylashtirishingiz mumkin.
+
 
     ```jsx harmony
     <h1>Hello!</h1>
@@ -760,11 +802,12 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-18. ### What is "key" prop and what is the benefit of using it in arrays of elements?
+18. ### Key prop nima va ularni array elementlari ichida foydalanishning foydalari qanday ?
 
-    A `key` is a special string attribute you **should** include when creating arrays of elements. *Key* prop helps React identify which items have changed, are added, or are removed.
+    **Kalit** - bu elementlar massivlarini yaratishda siz qo'shishingiz kerak bo'lgan maxsus string atributidir. *Key* rekviziti Reactga qaysi elementlar o‘zgargan, qo‘shilgan yoki o‘chirilganligini aniqlashga yordam beradi.
 
-    Most often we use ID from our data as *key*:
+
+    Ko'pincha biz ma'lumotlarimizdagi identifikatorni * kalit* sifatida ishlatamiz:
 
     ```jsx harmony
     const todoItems = todos.map((todo) =>
@@ -774,7 +817,8 @@ You can download the PDF and Epub version of this repository from the latest run
     )
     ```
 
-    When you don't have stable IDs for rendered items, you may use the item *index* as a *key* as a last resort:
+    Ko'rsatilgan elementlar uchun barqaror identifikatoringiz bo'lmasa, oxirgi chora sifatida * indeks* elementidan * kalit* sifatida foydalanishingiz mumkin:
+
 
     ```jsx harmony
     const todoItems = todos.map((todo, index) =>
@@ -786,24 +830,26 @@ You can download the PDF and Epub version of this repository from the latest run
 
     **Note:**
 
-    1. Using *indexes* for *keys* is **not recommended** if the order of items may change. This can negatively impact performance and may cause issues with component state.
-    2. If you extract list item as separate component then apply *keys* on list component instead of `li` tag.
-    3. There will be a warning message in the console if the `key` prop is not present on list items.
+    1. Agar elementlarning tartibi oʻzgarishi mumkin boʻlsa, *kalitlar* uchun *indekslardan* foydalanish **tavsiya etilmaydi**. Bu ishlashga salbiy ta'sir ko'rsatishi va komponent holati bilan bog'liq muammolarni keltirib chiqarishi mumkin.
+    2. Agar siz ro'yxat elementini alohida komponent sifatida ajratib olsangiz, "li" yorlig'i o'rniga ro'yxat komponentiga * kalitlarni * qo'llang.
+    3. Agar ro'yxat elementlarida "kalit" tayanchi bo'lmasa, konsolda ogohlantirish xabari paydo bo'ladi.
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-19. ### What is the use of refs?
+19. ### refs ishlatilish holatlari nima ?
 
-    The *ref* is used to return a reference to the element. They *should be avoided* in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
+    *ref* elementga havolani qaytarish uchun ishlatiladi. Aksariyat hollarda ulardan * qochish kerak*, ammo ular DOM elementiga yoki komponentning namunasiga to'g'ridan-to'g'ri kirish kerak bo'lganda foydali bo'lishi mumkin.
+
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-20. ### How to create refs?
+20. ### Qanday qilib refs ni yaratiladi?
 
-    There are two approaches
-    1. This is a recently added approach. *Refs* are created using `React.createRef()` method and attached to React elements via the `ref` attribute. In order to use *refs* throughout the component, just assign the *ref* to the instance property within constructor.
+    Ikkita yondashuv mavjud:
+    1. Bu yaqinda qo'shilgan yondashuv. *Refs* `React.createRef()` usuli yordamida yaratiladi va `ref` atributi orqali React elementlariga biriktiriladi. Komponentda *refs* dan foydalanish uchun konstruktor ichidagi misol xususiyatiga *ref* ni belgilash kifoya.
+
 
         ```jsx harmony
         class MyComponent extends React.Component {
@@ -816,7 +862,7 @@ You can download the PDF and Epub version of this repository from the latest run
           }
         }
         ```
-    2. You can also use ref callbacks approach regardless of React version. For example, the search bar component's input element is accessed as follows,
+    2. React versiyasidan qat'i nazar, qayta qo'ng'iroq qilish usulidan ham foydalanishingiz mumkin. Masalan, qidiruv paneli komponentining kiritish elementiga quyidagi tarzda kirish mumkin:
         ```jsx harmony
         class SearchBar extends Component {
            constructor(props) {
@@ -841,8 +887,9 @@ You can download the PDF and Epub version of this repository from the latest run
         }
         ```
 
-    You can also use *refs* in function components using **closures**.
-    **Note**: You can also use inline ref callbacks even though it is not a recommended approach.
+   Funktsiya komponentlarida **closers** yordamida *refs* dan ham foydalanishingiz mumkin..
+    **Note**: Tavsiya etilgan yondashuv bo'lmasa ham, siz inline ref qayta *callbacks* foydalanishingiz mumkin.
+
 
    **[⬆ Back to Top](#table-of-contents)**
     
