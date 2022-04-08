@@ -379,7 +379,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-2. ### What are the major features of React?
+2. ### Reactning asosiy xususiyatlari qanday?
 
     Reactning asosiy xususiyatlari:
 
@@ -392,11 +392,16 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-3. ### What is JSX?
+3. ### JSX nima?
 
-    *JSX* is a XML-like syntax extension to ECMAScript (the acronym stands for *JavaScript XML*). Basically it just provides syntactic sugar for the `React.createElement()` function, giving us expressiveness of JavaScript along with HTML like template syntax.
+   JSX - bu ECMAScript-ning XML-ga o'xshash sintaksisi kengaytmasi (qisqartma
+   JavaScript XML degan ma'noni anglatadi). Asosan u `React.createElement()`
+   funksiyasi uchun sintaktik shakarni taqdim etadi, bu bizga JavaScript-ning
+   ifodaliligini va HTML kabi shablon sintaksisini beradi.
 
-    In the example below text inside `<h1>` tag is returned as JavaScript function to the render function.
+
+    Quyidagi misolda `<h1>` tegi ichidagi matn render funksiyasiga JavaScript funksiyasi sifatida qaytariladi.
+
 
     ```jsx harmony
     class App extends React.Component {
@@ -413,11 +418,15 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-4. ### What is the difference between Element and Component?
+4. ### Element va komponent o'rtasidagi farq nima?
 
-    An *Element* is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. *Elements* can contain other *Elements* in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
+   *Element* : bu DOM tugunlari yoki boshqa komponentlar nuqtai nazaridan
+   ekranda paydo bo'ladigan narsalarni tavsiflovchi oddiy ob'ekt. *Elementlar* o'z
+   proplarida boshqa elementlarni o'z ichiga olishi mumkin. Reaktsiya elementini
+   yaratish arzon. *Element* yaratilgandan keyin u hech qachon mutatsiyaga
+   uchramaydi.
 
-    The object representation of React Element would be as follows:
+    React Element ob'ektining ko'rinishi quyidagicha bo'ladi:
 
     ```javascript
     const element = React.createElement(
@@ -427,7 +436,7 @@ You can download the PDF and Epub version of this repository from the latest run
     )
     ```
 
-    The above `React.createElement()` function returns an object:
+    Yuqoridagi `React.createElement()` funksiyasi obyektni qaytaradi:
 
     ```
     {
@@ -439,20 +448,23 @@ You can download the PDF and Epub version of this repository from the latest run
     }
     ```
 
-    And finally it renders to the DOM using `ReactDOM.render()`:
+    Va nihoyat, u `ReactDOM.render()` yordamida DOM-ga ishlaydi:
 
     ```html
     <div id='login-btn'>Login</div>
     ```
 
-    Whereas a **component** can be declared in several different ways. It can be a class with a `render()` method or it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output:
+     **Component** bir necha xil usullarda e'lon qilinishi mumkin. Bu
+     `render()` usuli bo'lgan class bo'lishi mumkin yoki u funksiya sifatida belgilanishi
+     mumkin. Har qanday holatda ham u prop input sifatida oladi va JSX tree output
+     sifatida qaytaradi:
 
     ```javascript
     const Button = ({ onLogin }) =>
       <div id={'login-btn'} onClick={onLogin}>Login</div>
     ```
 
-    Then JSX gets transpiled to a `React.createElement()` function tree:
+    Keyin JSX `React.createElement()` funktsiya daraxtiga o'tkaziladi:
 
     ```javascript
     const Button = ({ onLogin }) => React.createElement(
@@ -465,11 +477,12 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-5. ### How to create components in React?
+5. ### React-da komponentlarni qanday yaratish mumkin?
 
-    There are two possible ways to create a component.
+    Komponentni yaratishning ikkita mumkin bo'lgan usuli mavjud.
 
-    1. **Function Components:** This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as the first parameter and return React elements:
+    1. **Function Component:** Bu komponentni yaratishning eng oddiy usuli. Bular props obyektini birinchi parametr sifatida qabul qiladigan va React elementlarini qaytaradigan sof JavaScript funksiyalari:
+
 
         ```jsx harmony
         function Greeting({ message }) {
@@ -478,7 +491,7 @@ You can download the PDF and Epub version of this repository from the latest run
         }
         ```
 
-    2. **Class Components:** You can also use ES6 class to define a component. The above function component can be written as:
+    2. **Class Component:** Komponentni aniqlash uchun ES6 sinfidan ham foydalanishingiz mumkin. Yuqoridagi funktsiya komponenti quyidagicha yozilishi mumkin:
 
         ```jsx harmony
         class Greeting extends React.Component {
