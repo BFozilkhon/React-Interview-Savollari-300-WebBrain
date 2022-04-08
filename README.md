@@ -24,56 +24,56 @@ You can download the PDF and Epub version of this repository from the latest run
 | No. | Questions |
 | --- | --------- |
 |   | **Core React** |
-|1  | [What is React?](#what-is-react) |
-|2  | [What are the major features of React?](#what-are-the-major-features-of-react) |
-|3  | [What is JSX?](#what-is-jsx) |
-|4  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component) |
-|5  | [How to create components in React?](#how-to-create-components-in-react) |
-|6  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component) |
-|7  | [What are Pure Components?](#what-are-pure-components) |
-|8  | [What is state in React?](#what-is-state-in-react) |
-|9  | [What are props in React?](#what-are-props-in-react) |
-|10 | [What is the difference between state and props?](#what-is-the-difference-between-state-and-props) |
-|11 | [Why should we not update the state directly?](#why-should-we-not-update-the-state-directly) |
-|12 | [What is the purpose of callback function as an argument of setState()?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
-|13 | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling) |
-|14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
-|15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
-|16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
-|17 | [What are inline conditional expressions?](#what-are-inline-conditional-expressions) |
-|18 | [What is "key" prop and what is the benefit of using it in arrays of elements?](#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements) |
-|19 | [What is the use of refs?](#what-is-the-use-of-refs) |
-|20 | [How to create refs?](#how-to-create-refs)
-|21 | [What are forward refs?](#what-are-forward-refs) |
-|22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
-|23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
-|24 | [What is Virtual DOM?](#what-is-virtual-dom) |
-|25 | [How Virtual DOM works?](#how-virtual-dom-works) |
-|26 | [What is the difference between Shadow DOM and Virtual DOM?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
-|27 | [What is React Fiber?](#what-is-react-fiber) |
-|28 | [What is the main goal of React Fiber?](#what-is-the-main-goal-of-react-fiber) |
-|29 | [What are controlled components?](#what-are-controlled-components) |
-|30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
-|31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
-|32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
-|33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
-|34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
-|35 | [What are Higher-Order components?](#what-are-higher-order-components) |
-|36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
-|37 | [What is context?](#what-is-context) |
-|38 | [What is children prop?](#what-is-children-prop) |
-|39 | [How to write comments in React?](#how-to-write-comments-in-react) |
-|40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
-|41 | [What is reconciliation?](#what-is-reconciliation) |
-|42 | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name) |
-|43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
-|44 | [Is lazy function supports named exports?](#is-lazy-function-supports-named-exports) |
-|45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
-|46 | [What are fragments?](#what-are-fragments) |
-|47 | [Why fragments are better than container divs?](#why-fragments-are-better-than-container-divs) |
-|48 | [What are portals in React?](#what-are-portals-in-react) |
-|49 | [What are stateless components?](#what-are-stateless-components) |
-|50 | [What are stateful components?](#what-are-stateful-components) |
+|1  | [React nima ?](#what-is-react) |
+|2  | [Reactning asosiy xususiyatlari qanday?](#what-are-the-major-features-of-react) |
+|3  | [JSX nima ?](#what-is-jsx) |
+|4  | [Element va komponent o'rtasidagi farq nima?](#what-is-the-difference-between-element-and-component) |
+|5  | [React-da komponentlarni qanday yaratish mumkin?](#how-to-create-components-in-react) |
+|6  | [Qachon function Component orginga Class Component ishlatiladi ?](#when-to-use-a-class-component-over-a-function-component) |
+|7  | [Pure Component nima ?](#what-are-pure-components) |
+|8  | [React state nima ?](#what-is-state-in-react) |
+|9  | [Reactda proplar nima ?](#what-are-props-in-react) |
+|10 | [State va proplarni farqalari nima ?](#what-is-the-difference-between-state-and-props) |
+|11 | [Nima Sababdan stateni togridan togri yangilamaymiz ?](#why-should-we-not-update-the-state-directly) |
+|12 | [setState() argumenti sifatida callback funcksiyasining maqsadi nima ?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
+|13 | [ Html va React event handling farqlari nima ?](#what-is-the-difference-between-html-and-react-event-handling) |
+|14 | [JSX callbacks da qanday qilib metodlarini va event handlerlarini bind qilish mumkin ?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
+|15 | [Callback yoki event handler ga qanday qilib parameter yuboriladi ?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
+|16 | [React sintetik hodisalar nima ?](#what-are-synthetic-events-in-react) |
+|17 | [Inline conditional exresssion nima ?](#what-are-inline-conditional-expressions) |
+|18 | [Key prop nima va ularni array elementlari ichida foydalanishning foydalari qanday ?](#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements) |
+|19 | [refs ishlatilish holatlari nima ?](#what-is-the-use-of-refs) |
+|20 | [Qanday qilib refs ni yaratiladi?](#how-to-create-refs)
+|21 | [Forward refs nima ?](#what-are-forward-refs) |
+|22 | [Callback ref va findDOMNode() orasida qay biri koproq afzal korindadi va nima uchun ?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
+|23 | [Nima Saba String Refs meros bolib qoladi ?](#why-are-string-refs-legacy) |
+|24 | [Virtual DOM nima ?](#what-is-virtual-dom) |
+|25 | [Virtual DOM qanday ishlaydi ?](#how-virtual-dom-works) |
+|26 | [Shadow DOM va Virtual Dom farqlari nimada ?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
+|27 | [React Fiber nima ?](#what-is-react-fiber) |
+|28 | [React fiberning eng asosiy ishlatilish maqsadalari nima ?](#what-is-the-main-goal-of-react-fiber) |
+|29 | [Controlled Components nima ?](#what-are-controlled-components) |
+|30 | [Uncontrolled Components nima ?](#what-are-uncontrolled-components) |
+|31 | [CreateElement va va cloneElement farqlari nima ?](#what-is-the-difference-between-createelement-and-cloneelement) |
+|32 | [Reactda statelarni ko’tarishlik nima ?](#what-is-lifting-state-up-in-react) |
+|33 | [React lifecycle metodlari nima ?](#what-are-the-different-phases-of-component-lifecycle) |
+|34 | [Reactda lifecycle componentlarni aylanish bosqichlari qanday ?](#what-are-the-lifecycle-methods-of-react) |
+|35 | [Higher-Order Componentlar nima ?](#what-are-higher-order-components) |
+|36 | [HOC komponenti uchun proksi-serverni qanday yaratish mumkin ?](#how-to-create-props-proxy-for-hoc-component) |
+|37 | [Context nima ?](#what-is-context) |
+|38 | [Children prop nima ?](#what-is-children-prop) |
+|39 | [React da qanday qilib commentlar yozsa boladi ?](#how-to-write-comments-in-react) |
+|40 | [Super konstruktorni props argumenti bilan ishlatishdan maqsad nima?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
+|41 | [Reconciliation nima ?](#what-is-reconciliation) |
+|42 | [Dinamik kalit nomi bilan holatni qanday o'rnatish mumkin?](#how-to-set-state-with-a-dynamic-key-name) |
+|43 | [Komponent har safar ko'rsatilayotganda funksiya chaqirilishining umumiy xatosi nima bo'ladi?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
+|44 | [Lazy funksiya nomlangan eksportni qo'llab-quvvatlaydimi?](#is-lazy-function-supports-named-exports) |
+|45 | [Nima uchun React sinf atributidan ko'ra className ishlatadi?](#why-react-uses-classname-over-class-attribute) |
+|46 | [React fragments nima ?](#what-are-fragments) |
+|47 | [Nima uchun fragmentlar konteyner divlaridan yaxshiroq?](#why-fragments-are-better-than-container-divs) |
+|48 | [Reactdagi portallar nima?](#what-are-portals-in-react) |
+|49 | [Stateless componentlar nima ?](#what-are-stateless-components) |
+|50 | [Statful componentlar nima ?](#what-are-stateful-components) |
 |51 | [How to apply validation on props in React?](#how-to-apply-validation-on-props-in-react) |
 |52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
 |53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
