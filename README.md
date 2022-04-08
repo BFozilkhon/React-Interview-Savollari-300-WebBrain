@@ -367,21 +367,27 @@ You can download the PDF and Epub version of this repository from the latest run
 
 
     
-1. ### What is React?
+1. ### React Nima?
 
-    React is an **open-source front-end JavaScript library** that is used for building user interfaces, especially for single-page applications. It is used for handling view layer for web and mobile apps. React was created by [Jordan Walke](https://github.com/jordwalke), a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
+    React - **(open-source front-end JavaScript library)** bu foydalanuvchi interfeyslarini yaratish uchun, ayniqsa, bir sahifali
+    ilovalar uchun ishlatiladigan ochiq manbali JavaScript kutubxonasi. U veb va
+    mobil ilovalar uchun ko'rinish qatlamini (front-end) boshqarish uchun ishlatiladi.
+    Reaktni Facebook’da ishlaydigan dasturiy ta’minot muhandisi [Jordan Walke](https://github.com/jordwalke)
+    yaratgan. React birinchi marta Facebook-ning News Feed-da 2011-yilda va
+    Instagram-da 2012-yilda joylashtirilgan.
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
 2. ### What are the major features of React?
 
-    The major features of React are:
+    Reactning asosiy xususiyatlari:
 
-    * It uses **VirtualDOM** instead of RealDOM considering that RealDOM manipulations are expensive.
-    * Supports **server-side rendering**.
-    * Follows **Unidirectional** data flow or data binding.
-    * Uses **reusable/composable** UI components to develop the view.
+    * RealDOM manipulyatsiyalari qimmat ekanligini hisobga olib, RealDOM o'rniga **VirtualDOM**-dan foydalanadi.
+    * Server tomonida **renderlash**ni qo'llab-quvvatlaydi.
+    * Bir yo'nalishli ma'lumotlar oqimini yoki ma'lumotlarni bog'lashni kuzatib boradi.
+    * Ko'rinishni ishlab chiqish uchun qayta **ishlatiladigan/kompozitsiyalanuvchi** UI komponentlaridan foydalanadi.
+
 
 
    **[⬆ Back to Top](#table-of-contents)**
